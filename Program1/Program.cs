@@ -3,17 +3,23 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+
+void ThreeNumber(int n)
+{
+    if(n>100)
+    {
+        while (n >= 1000)
+        {
+        n = n / 10;
+        }
+        Console.WriteLine("Третья цифра числа: " + (n % 10));
+    }
+    else
+    {
+    Console.WriteLine("Третьей цифры нет!");
+    }
+}
+
 Console.WriteLine("Введите число:");
-int n = int.Parse(Console.ReadLine()!);
-int ThreeNumber = 0;
-if(n>100){
-while (n >= 1000)
-{
-n = n / 10;
-}
-Console.WriteLine(n % 10);
-}
-else
-{
-Console.WriteLine("Третьей цифры нет!");
-}
+int num = int.Parse(Console.ReadLine()!);
+ThreeNumber(num);

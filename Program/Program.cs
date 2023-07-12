@@ -3,15 +3,21 @@
 // 782 -> 8
 // 918 -> 1
 
+
+void SearchSecondNumber(int num)
+{
+    int SearchNumber = 0;
+    if(num > 100 && num < 1000)
+    {
+    SearchNumber = (num / 10) % 10;
+    Console.WriteLine("Вторая цифра числа: " + SearchNumber);
+    }
+    else
+    {
+    Console.WriteLine("Число не трёхзначное!");
+    }
+}
+
 Console.WriteLine("Введите трехзначное число:");
 int n = int.Parse(Console.ReadLine()!);
-int SecondNumber = 0;
-
-if(n > 100 && n < 1000)
-{
-SecondNumber = (n / 10) % 10;
-Console.WriteLine("Вторая цифра числа: " + SecondNumber);
-}
-else
-{Console.WriteLine("Число не трёхзначное!");
-}
+SearchSecondNumber(n);
